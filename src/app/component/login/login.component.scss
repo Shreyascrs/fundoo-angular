@@ -1,0 +1,69 @@
+.login {
+  margin-left: 2px;
+  width: 376px;
+  height: 437px;
+  margin-top: 73px;
+  background-color: antiquewhite;
+}
+.title{
+  width: 20px;
+  height: 20px;
+  margin-left: 30%;
+  gap: 20px;
+  color: rgb(91, 219, 74);
+  margin-top: 25px;
+}
+
+.input-style{
+  margin-left: 50px;
+  height: 100px;
+  width: 350px;
+  margin-top: 20px;
+}
+
+.button{
+  height: 40px;
+  width: 92px;
+  margin-left: 90px;
+  margin-bottom: 20px;
+}
+
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin: -15px;
+}
+.mat-stroked-button {
+  border: 1px solid currentColor;
+  width: -12px;
+  padding: 0 15px;
+  line-height: 37px;
+  margin-top: 23px;
+  margin-inline-start: 79px;
+  color:black; 
+}
+.mat-card>:last-child:not(.mat-card-footer) {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0 .75em 0 .75em;
+    margin-top: -10px;
+    position: relative;
+}
+.mat-form-field-flex {
+  display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 333px;
+}
+.element.style {
+  place-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 21px;
+}

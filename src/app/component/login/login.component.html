@@ -1,0 +1,47 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="login" fxFlex="100">
+    <mat-card-title fxLayoutAlign="center start">
+      <div>
+        <h1>Fundoo</h1>
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <div style="margin-top: -8%">
+        <h2 fxLayoutAlign="center">login Page</h2>
+      </div>
+    </mat-card-subtitle>
+
+    <div>
+      <form>
+        <div>
+          <mat-form-field appearance="outline" fxLayoutAlign="center center">
+            <mat-label>email</mat-label>
+            <input type="email" matInput placeholder="enter your email" [formControl]="email"
+              [(ngModel)]="loginmodel.email" [errorStateMatcher]="matcher" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div>
+
+          <mat-form-field appearance="outline" fxLayoutAlign="center center">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter the password" [(ngModel)]="loginmodel.password"
+              [formControl]="password" [type]="!hide ? 'password' : 'text'" required>
+            <mat-icon matSuffix>visibility</mat-icon>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <button mat-stroked-button color="accent" (click)="login()">Login</button>
+          <button mat-stroked-button color="accent" routerLink="/register">Register</button>
+        </div>
+
+        <div>
+          <a href="/forgot" fxLayoutAlign="end end">forgotPassword</a>
+        </div>
+      </form>
+    </div>
+  </mat-card>
+</div>

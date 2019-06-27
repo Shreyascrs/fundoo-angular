@@ -1,0 +1,56 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <mat-card class="register" fxFlex="100">
+    <mat-card-title fxLayoutAlign="center center">
+      <div>
+        <h1>Fundoo</h1>
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <div style="margin-top: -8%">
+        <h2 fxLayoutAlign="center">Register user</h2>
+      </div>
+    </mat-card-subtitle>
+    <div>
+      <div class="name">
+        <mat-form-field appearance="outline" fxLayoutAlign="center center" >
+          <mat-label>Name</mat-label>
+          <input type="name" matInput placeholder="name" [(ngModel)]="register.name" required>
+          <mat-icon matSuffix>sentiment_satisfied_alt</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div>
+
+        <mat-form-field appearance="outline" fxLayoutAlign="center center">
+          <mat-label>Phonenumber</mat-label>
+          <input matInput placeholder=" enter the phonenumber"  [(ngModel)]="register.phoneNumber" required>
+          <mat-icon matSuffix>call</mat-icon>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" fxLayoutAlign="center center">
+          <mat-label>email</mat-label>
+          <input type="email" matInput placeholder="email"  [(ngModel)]="register.email" required>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline" fxLayoutAlign="center center">
+          <mat-label>Password</mat-label>
+          <input type="enter the password" matInput placeholder="password"  [(ngModel)]="register.password" required>
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <!-- <div>
+        <mat-form-field appearance="outline" fxLayoutAlign="center center">
+          <mat-label> confirmPassword</mat-label>
+          <input type="password" matInput placeholder="confirmPassword" required>
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div> -->
+      <div>
+        <button mat-stroked-button color="accent" (click)=registerfun()>Register</button>
+      </div>
+    </div>
+  </mat-card>
+  </div>
