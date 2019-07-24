@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ResetpasswordComponent } from './component/resetpassword/resetpassword.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { AddnoteComponent } from './component/addnote/addnote.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     RegisterComponent,
     ForgotpasswordComponent,
     ResetpasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddnoteComponent
     
   ],
   imports: [

@@ -38,9 +38,9 @@ export class ForgotpasswordComponent implements OnInit {
           console.log(response);
           this.snackbar.open(
             "Link sent", "close",
-
             { duration: 2500 }
           )
+          this.route.navigate(['/login'])
         } else {
           console.log(response);
           this.snackbar.open(

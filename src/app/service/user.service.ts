@@ -15,7 +15,7 @@ export class UserService {
   }
 
   public putRequest(url:any,data:any):any{
-    return this.http.put(this.baseUrl+url,data,{headers:new HttpHeaders().set("jwtToken",localStorage.getItem('token'))});
+    return this.http.put(this.baseUrl+url,data,{headers:new HttpHeaders().set("token",localStorage.getItem('token'))});
   }
 
   public getRequest(url:any):any{

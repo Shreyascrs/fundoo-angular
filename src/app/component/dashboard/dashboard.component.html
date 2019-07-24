@@ -1,35 +1,85 @@
-<div style="height: 80vh;">
-    <mat-toolbar color="primary">
-        <mat-toolbar-row>
-          <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-            <mat-icon>menu</mat-icon>
-          </button>
-          <span>Fundoo Notes</span>
-          <span class="menu-spacer"></span>
-          <div fxShow="true" fxHide.lt-md>
-            <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-            <a href="#" mat-button>Menu Item 1</a>
-            <a href="#" mat-button>Menu Item 2</a>
-            <a href="#" mat-button>Menu Item 3</a>
-            <a href="#" mat-button>Menu Item 4</a>
-            <a href="#" mat-button>Menu Item 5</a>
-            <a href="#" mat-button>Menu Item 6</a>
-          </div>
-        </mat-toolbar-row>
-      </mat-toolbar>
-    
-      <mat-sidenav-container fxFlexFill>
-        <mat-sidenav >
-          <mat-nav-list>
-            <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-            <a href="#" mat-list-item>Menu Item 1</a>
-            <a href="#" mat-list-item>Menu Item 2</a>
-            <a href="#" mat-list-item>Menu Item 3</a>
-            <a href="#" mat-list-item>Menu Item 4</a>
-            <a href="#" mat-list-item>Menu Item 5</a>
-            <a href="#" mat-list-item>Menu Item 6</a>
-          </mat-nav-list>
-        </mat-sidenav>
-        <mat-sidenav-content fxFlexFill></mat-sidenav-content>
-      </mat-sidenav-container>
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+
+
+  <mat-toolbar>
+    <div fxLayout="row" fxLayoutAlign="start start">
+      <div>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon matTooltip="Main menu">menu</mat-icon>
+        </button>
+      </div>
+      <div>
+        <img class="gb_la gb_5d" alt="" aria-hidden="true"
+          src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png"
+          srcset="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png 1x, https://www.gstatic.com/images/branding/product/2x/keep_48dp.png 2x "
+          style="width:40px;height:40px">
+      </div>
+      <div fxHide.xs>
+        <h3 style="padding-top: 3%; padding-left: 5%;">FundooNotes</h3>
+      </div>
+    </div>
+
+    <div fxFlex="60" fxLayout="row" fxLayout.xs="row" fxLayoutAlign="center center">
+      <mat-form-field appearance="outline" fxHide.xs [style.fontSize.px]="2" class="search"
+        style="margin-left: 10%;width: 200%;">
+        <button mat-icon-button class="search-button">
+          <mat-icon matTooltip="Search">search</mat-icon>
+        </button>
+        <input fxFlex="100" matInput placeholder="Search" [style.fontSize.px]="16"
+          (input)="onSearchChange($event.target.value)" class="search-window" autocomplete="off" />
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" style="margin-left: 50px;" fxLayoutAlign="space-between center" fxLayoutWrap fxLayoutGap="15%">
+      <div fxFlex="40">
+        <button mat-icon-button color="basic" matTooltip="Refresh">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </div>
+      <div fxFlex="40">
+        <button mat-icon-button color="basic" matTooltip="settings">
+          <mat-icon>settings</mat-icon>
+        </button>
+      </div>
+      <div fxFlex="40">
+        <button mat-icon-button color="basic" matTooltip="grid view">
+          <mat-icon>view_stream</mat-icon>
+        </button>
+      </div>
+      <div fxFlex="40">
+        <mat-icon> account_circle</mat-icon>
+      </div>
+    </div>
+  </mat-toolbar>
 </div>
+<mat-divider></mat-divider>
+<mat-sidenav-container style="height:200vh;">
+
+  <mat-sidenav #sidenav style="width: 196px;" mode="side">
+    <div class="sidenavbuttonwidth button">
+      <button mat-button>
+        <mat-icon>lightbulb_outline</mat-icon>Notes
+      </button>
+    </div>
+    <div class="sidenavbuttonwidth button">
+        <button mat-button>
+          <mat-icon>notifications_none</mat-icon>Remainder
+        </button>
+      </div>
+      <hr>
+      <div>
+        Labels
+      </div>
+      <hr>
+      <div class="sidenavbuttonwidth button">
+          <button mat-button>
+            <mat-icon>archive</mat-icon>archive
+          </button>
+        </div>
+        <div class="sidenavbuttonwidth button">
+            <button mat-button>
+              <mat-icon>delete</mat-icon>Trash
+            </button>
+          </div>
+  </mat-sidenav>
+</mat-sidenav-container>

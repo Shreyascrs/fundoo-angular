@@ -28,42 +28,58 @@
   margin-bottom: 20px;
 }
 
-
 .mat-form-field {
   display: inline-block;
   position: relative;
   text-align: left;
   margin: -15px;
 }
+
 .mat-stroked-button {
   border: 1px solid currentColor;
   width: -12px;
   padding: 0 15px;
   line-height: 37px;
-  margin-top: 23px;
-  margin-inline-start: 79px;
-  color:black; 
+  margin-top: 28px;
+  -webkit-margin-start: 79px;
+  margin-left: 63px;
+  color: black; 
 }
+
 .mat-card>:last-child:not(.mat-card-footer) {
   margin-top: 50px;
   margin-bottom: 0;
 }
+
 .mat-form-field-appearance-outline .mat-form-field-flex {
     padding: 0 .75em 0 .75em;
     margin-top: -10px;
     position: relative;
 }
+
 .mat-form-field-flex {
   display: inline-flex;
   align-items: baseline;
   box-sizing: border-box;
   width: 333px;
 }
-.element.style {
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+  padding: 0 .75em 0 .75em;
+  margin-top: 0.75em;
+  position: relative;
+}
+
+element.style {
   place-content: flex-end;
   align-items: flex-end;
   flex-direction: row;
   box-sizing: border-box;
   display: flex;
-  margin-top: 21px;
+  margin-top: 26px;
 }
+.margina{
+margin-top: 15px;
+}
+
+

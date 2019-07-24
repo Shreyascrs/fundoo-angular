@@ -29,16 +29,18 @@
             <mat-label>Password</mat-label>
             <input type="password" matInput placeholder="Enter the password" [(ngModel)]="loginmodel.password"
               [formControl]="password" [type]="!hide ? 'password' : 'text'" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessagepass()}}</mat-error>
             <mat-icon matSuffix>visibility</mat-icon>
           </mat-form-field>
         </div>
 
         <div>
-          <button mat-stroked-button color="accent" (click)="login()">Login</button>
           <button mat-stroked-button color="accent" routerLink="/register">Register</button>
+          <button mat-stroked-button color="accent" (click)="login()">Login</button>
+
         </div>
 
-        <div>
+        <div class="margina">
           <a href="/forgot" fxLayoutAlign="end end">forgotPassword</a>
         </div>
       </form>

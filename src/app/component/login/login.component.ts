@@ -44,8 +44,7 @@ export class LoginComponent implements OnInit {
           if (Response.statusCode == 200)
            {
             console.log(Response);
-            localStorage.setItem("token", Response.token);
-            localStorage.setItem("email", Response.email);
+            localStorage.setItem("token", Response.data);
             this.router.navigate(['/dashboard']);
   
             this.snackBar.open(
@@ -78,6 +77,10 @@ export class LoginComponent implements OnInit {
         '';
   }
 
+  getErrorMessagepass() {
+    return this.email.hasError('required') ? 'You must enter a password' :
+      this.email.hasError('email') ? 'Not a valid password' :
+        '';
+  }
+
 }
-
-
